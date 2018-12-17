@@ -22,7 +22,7 @@ class Board extends Component {
     const allCards = this.state.cards;
     console.log(allCards[0]);
     const cardComponents = allCards.map((card, index) => {
-      <Card key={index} text={card.text ? card.text : ""} emoji={card.emoji ? card.emoji : ""} />
+      return <Card key={index} text={card.text} emoji={card.emoji} />
     });
 
     return (
