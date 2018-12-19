@@ -10,6 +10,7 @@ class Card extends Component {
   }
 
   render() {
+    console.log("Rendering card with props", this.props);
 
     const emoji = require("emoji-dictionary");
 
@@ -17,7 +18,7 @@ class Card extends Component {
       <div className="card">
         <div>
           {this.props.text}
-          <p>{emoji.getUnicode(this.props.emoji)}</p>
+          <p>{this.props.emoji ? emoji.getUnicode(this.props.emoji) : ""}</p>
         </div>
       </div>
     )
